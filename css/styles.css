@@ -1,0 +1,175 @@
+* { /* reseteo del body para dejarlo en "blanco" */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* va todo el columna */
+    background-image: linear-gradient(rgb(8, 8, 8), rgba(46, 22, 4, 0.897)), url("../assets/images/fondoindex.jpg"); /*degradado fondo */
+    background-size: cover; /* para rellenar todo */
+    background-repeat: no-repeat;
+    background-position: center; 
+    min-height: 100vh; /* 100% del alto de la pantalla */
+}
+
+main {  /* damos flex al contenedor para mover todo lo de dentro a mi gusto */
+    flex: 1; /* ocupa rodo el espacio hasta llegar a footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav ul { 
+    display: flex; /* en fila */
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+nav a {
+    display: inline-block; /* para que podamos darle medidas */
+    padding: 0.75rem;
+    font-family: "Jost", sans-serif;
+    color: rgb(241, 231, 212);
+    font-size: 1rem;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 1.05;
+    color: rgb(241, 231, 212);
+    text-shadow: 1px 1px 0px #000, 2px 2px 3px rgba(203, 153, 17, 0.521);
+}
+
+h2 {
+    font-family: "Jost", sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 4rem;
+    color: rgb(241, 231, 212);
+}
+
+
+.boton { 
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1rem;
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: rgb(241, 231, 212);
+    background: transparent;
+    border-bottom: 2px solid rgb(241, 231, 212);
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(241, 231, 212, 0.25);
+}
+ 
+
+footer p {
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: rgba(241, 231, 212, 0.8);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer a {
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: rgb(241, 231, 212);
+    transition: color 0.3s ease;
+}
+
+
+/* -------- ADAPTADO A TABLET --------- */
+
+@media screen and (min-width: 768px) {
+    nav ul { 
+        gap: 3rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    .titulo {
+        width: fit-content;
+        align-items: stretch;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+
+    
+} 
+
+
+/* -------- ADAPTADO A ORDENADOR --------- */
+@media screen and (min-width: 1200px) {
+    
+    nav ul { 
+        gap: 6rem;
+    }
+
+    nav a:hover {
+        color: rgb(207, 115, 11);
+    }
+
+    h2:hover {
+        color: rgb(207, 115, 11);
+        font-weight: 400;
+    }
+
+    .boton:hover {
+        color: rgb(207, 115, 11);
+        border-bottom-color: rgb(207, 115, 11);
+    }
+    
+    footer a:hover {
+        color: rgb(207, 115, 11);
+    }
+}
+
+    
+
+
