@@ -13,7 +13,7 @@ body {
     background-image: linear-gradient(rgb(8, 8, 8), rgba(46, 22, 4, 0.897)), url("../assets/images/fondoindex.jpg"); /*degradado fondo */
     background-size: cover; /* para rellenar todo */
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: 25%center; 
     min-height: 100vh; /* 100% del alto de la pantalla */
 }
 
