@@ -1,4 +1,5 @@
-* { /* reseteo del body para dejarlo en "blanco" */
+* {
+    /* reseteo del body para dejarlo en "blanco" */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,16 +10,22 @@
 
 body {
     display: flex;
-    flex-direction: column; /* va todo el columna */
-    background-image: linear-gradient(rgb(8, 8, 8), rgba(46, 22, 4, 0.897)), url("../assets/images/fondoindex.jpg"); /*degradado fondo */
-    background-size: cover; /* para rellenar todo */
+    flex-direction: column;
+    /* va todo el columna */
+    background-image: linear-gradient(rgba(8, 8, 8, 0.848), rgba(55, 26, 3, 0.749)), url("../assets/images/fondoindex.jpg");
+    /*degradado fondo */
+    background-size: cover;
+    /* para rellenar todo */
     background-repeat: no-repeat;
-    background-position: 25%center; 
-    min-height: 100vh; /* 100% del alto de la pantalla */
+    background-position: 25%center;
+    min-height: 100vh;
+    /* 100% del alto de la pantalla */
 }
 
-main {  /* damos flex al contenedor para mover todo lo de dentro a mi gusto */
-    flex: 1; /* ocupa rodo el espacio hasta llegar a footer */
+main {
+    /* damos flex al contenedor para mover todo lo de dentro a mi gusto */
+    flex: 1;
+    /* ocupa rodo el espacio hasta llegar a footer */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,15 +33,29 @@ main {  /* damos flex al contenedor para mover todo lo de dentro a mi gusto */
     text-align: center;
 }
 
-nav ul { 
-    display: flex; /* en fila */
+#biografia,
+#multimedia,
+#contacto {
+    justify-content: flex-start;
+}
+
+h2.tituloBiografia,
+h2.tituloGaleria,
+h2.tituloContacto {
+    margin-top: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    /* en fila */
     justify-content: center;
     gap: 2rem;
     padding-top: 2rem;
 }
 
 nav a {
-    display: inline-block; /* para que podamos darle medidas */
+    display: inline-block;
+    /* para que podamos darle medidas */
     padding: 0.75rem;
     font-family: "Jost", sans-serif;
     color: rgb(241, 231, 212);
@@ -54,7 +75,7 @@ h1 {
     font-size: 5rem;
     line-height: 1.05;
     color: rgb(241, 231, 212);
-    text-shadow: 1px 1px 0px #000, 2px 2px 3px rgba(203, 153, 17, 0.521);
+    text-shadow: 1px 1px 0px #000, 2px 2px 3px rgba(206, 96, 6, 0.521);
 }
 
 h2 {
@@ -68,7 +89,7 @@ h2 {
 }
 
 
-.boton { 
+.boton {
     display: inline-block;
     margin-top: 3rem;
     padding: 1rem;
@@ -84,15 +105,16 @@ h2 {
 }
 
 footer {
+    background-color: #261101bd;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     border-top: 1px solid rgba(241, 231, 212, 0.25);
 }
- 
+
 
 footer p {
     font-family: "Jost", sans-serif;
@@ -116,11 +138,110 @@ footer a {
     transition: color 0.3s ease;
 }
 
+.formulario {
+    width: min(80vw, 32rem);
+    background-color: rgba(10, 6, 0, 0.579);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(207, 116, 11, 0.364);
+    padding: 40px;
+    border-radius: 20px;
+    height: 450px;
+    overflow-y: auto;
+    margin-bottom: 20px;
 
+}
+
+#button {
+    font-family: "Jost", sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    height: 2rem;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(207, 116, 11, 0.47);
+    border: 1px solid rgba(207, 116, 11, 0.47);
+    color: rgb(241, 231, 212);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#textarea,
+#telefono,
+#email,
+#nombre {
+    resize: none;
+    font-family: "Jost", sans-serif;
+    font-size: 0.8rem;
+    color: #261101;
+}
+
+input {
+    height: 2rem;
+}
+
+textarea {
+    min-height: 15vh;
+    margin-bottom: 15px;
+}
+
+h2.contacta {
+    margin-bottom: 30px;
+}
+
+input:focus {
+    background-color: #efe4c2;
+    border-color: rgb(207, 115, 11);
+    outline: none;
+}
+
+textarea:focus {
+    background-color: #efe4c2;
+    border-color: rgb(207, 115, 11);
+    outline: none;
+}
+
+.cajaBiografia {
+  background-color: rgba(0, 0, 0, 0.533);
+  color: rgb(241, 231, 212);
+  width: 90%;
+  max-width: 700px;
+  margin: 100px auto 80px;
+  padding: 90px 60px 60px;
+  position: relative;
+  border-radius: 60px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.fotoBiografia {
+    margin-top: 15px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(241, 231, 212, 0.25);
+    border: 3px solid rgb(241, 231, 212);
+}
+
+.cajaBiografia p {
+    font-family: "Jost", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    text-align: left;
+    
+}
 /* -------- ADAPTADO A TABLET --------- */
 
 @media screen and (min-width: 768px) {
-    nav ul { 
+    nav ul {
         gap: 3rem;
     }
 
@@ -140,14 +261,16 @@ footer a {
 
 
 
-    
-} 
+
+
+
+}
 
 
 /* -------- ADAPTADO A ORDENADOR --------- */
 @media screen and (min-width: 1200px) {
-    
-    nav ul { 
+
+    nav ul {
         gap: 6rem;
     }
 
@@ -157,19 +280,24 @@ footer a {
 
     h2:hover {
         color: rgb(207, 115, 11);
-        font-weight: 400;
     }
 
     .boton:hover {
         color: rgb(207, 115, 11);
         border-bottom-color: rgb(207, 115, 11);
     }
-    
+
     footer a:hover {
         color: rgb(207, 115, 11);
     }
+
+    .formulario {
+        margin-bottom: 40px;
+    }
+
+    #button:hover {
+        background-color: rgb(207, 116, 11);
+        border-color: rgb(241, 151, 43);
+        box-shadow: 0 0 12px rgba(207, 116, 11, 0.55);
+    }
 }
-
-    
-
-
